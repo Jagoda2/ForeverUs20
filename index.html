@@ -121,12 +121,28 @@ p{font-size:clamp(.9rem,1.55vw,1.18rem);line-height:1.58;max-width:720px;margin:
 
 <section class="screen" id="final"><div class="wrap">
 <div class="k">Forever us</div>
-<div class="media"><img src="media/final-us.jpg" alt="Us"></div>
+<div class="media"><img src="media/media/final-us.jpg" alt="Us"></div>
 <h2>And this is only the beginning.</h2>
 <p>More memories, more laughter, more ordinary days, and more reasons to choose you.</p>
 </div></section>
 
-<audio id="music" src="media/moth-to-a-flame.m4a" loop></audio>
+<audio id="music" src="media/media/moth-to-a-flame.m4a" loop></audio>
+
+ <div id="dots"></div>
+
+<div id="nav">
+  <button type="button" onclick="prev()">←</button>
+  <button type="button" onclick="next()">→</button>
+</div>
+
+<div id="musicStatus" onclick="toggleMusic()">
+  ♫ <span id="musicText">music</span>
+</div>
+
+<div id="swipeHint">
+  swipe / use arrows
+</div>
+ 
 <script>
 const screens=[...document.querySelectorAll('.screen')];
 const dots=document.getElementById('dots');
