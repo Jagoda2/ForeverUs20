@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guguru Girl — Our Story</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+:root{--bg:#0b0b0a;--cream:#eee8dc;--gold:#c9a45c;--muted:#9c9589;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:20}
+button{font:inherit}.top{position:fixed;z-index:15;top:0;left:0;right:0;height:72px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(11,11,10,.48);backdrop-filter:blur(12px)}.brand{font-size:11px;letter-spacing:.32em}.brand b{color:var(--gold);font-weight:500}.sound{border:1px solid rgba(255,255,255,.18);border-radius:99px;background:transparent;color:var(--cream);padding:9px 14px;font-size:10px;letter-spacing:.08em;cursor:pointer}
+.cover{height:100vh;min-height:700px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 40%,rgba(201,164,92,.13),transparent 30%),#0b0b0a}.cover .orb{position:absolute;width:62vw;height:62vw;right:-20vw;top:5vh;border:1px solid rgba(201,164,92,.15);border-radius:50%}.cover-content{position:relative;max-width:900px;padding:0 8vw}.eyebrow{font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin:0 0 22px}.cover h1{font:500 clamp(74px,13vw,180px)/.72 "Cormorant Garamond",serif;letter-spacing:-.05em;margin:0}.cover h1 em{color:var(--gold);font-style:italic}.cover p:not(.eyebrow){max-width:480px;margin:42px auto;color:var(--muted);line-height:1.8;font-size:14px}.enter{border:1px solid rgba(201,164,92,.6);background:transparent;color:var(--cream);padding:15px 24px;letter-spacing:.2em;text-transform:uppercase;font-size:10px;cursor:pointer}.music-note{position:absolute;bottom:42px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.2em;color:#756f65}.chapter{padding:150px 7vw;min-height:100vh;border-top:1px solid var(--line)}.chapter-inner{max-width:1120px;margin:auto}.chapter-head{display:grid;grid-template-columns:90px 1fr;gap:35px;align-items:start;margin-bottom:55px}.num{font-size:10px;letter-spacing:.22em;color:var(--gold);padding-top:10px}.chapter h2{font:500 clamp(68px,10vw,135px)/.75 "Cormorant Garamond",serif;letter-spacing:-.05em;margin:0}.chapter h2 em{color:var(--gold)}.sub{color:var(--muted);max-width:480px;line-height:1.8;margin-top:30px}.sobi-img{width:100%;height:min(68vh,680px);object-fit:cover;display:block;filter:saturate(.86)}.caption{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:13px 0;font-size:9px;letter-spacing:.2em;color:#7e776c}.story-quote{max-width:700px;margin:90px auto 0;font:500 34px/1.15 "Cormorant Garamond",serif}.story-quote em{color:var(--gold)}
+.cinema{background:#090909}.film{background:#000;max-width:1100px;margin:auto}.film video{width:100%;max-height:700px;display:block;object-fit:contain}.film-label{display:flex;justify-content:space-between;padding:14px;font-size:9px;letter-spacing:.2em;color:#7e776c;border-top:1px solid var(--line)}.cinema-copy{max-width:720px;margin:105px auto 0}.cinema-copy h3{font:500 clamp(52px,7vw,92px)/.82 "Cormorant Garamond",serif;margin:0 0 42px}.cinema-copy p:not(.eyebrow){color:#aaa297;line-height:1.95;margin:0 0 25px}.cinema-copy em{color:var(--gold)}
+.us{background:#11100e}.us-layout{display:grid;grid-template-columns:1fr .8fr;gap:7vw;align-items:center}.us-text p:not(.eyebrow){color:#aaa297;line-height:1.9;max-width:560px}.museum{width:100%;max-height:760px;object-fit:cover;display:block;filter:saturate(.86)}.date-line{display:flex;align-items:center;gap:16px;color:var(--gold);font-size:10px;letter-spacing:.2em;margin:40px 0 25px}.date-line:before{content:"";width:55px;height:1px;background:var(--gold)}
+.event{border-top:1px solid var(--line);padding:70px 0;max-width:850px;margin:0 auto}.event h4{font:500 42px "Cormorant Garamond",serif;margin:10px 0}.event p{color:#938c82;line-height:1.8;max-width:650px}.break{height:160px;display:grid;place-items:center;color:#5e5952;font-size:10px;letter-spacing:.35em;text-transform:uppercase}.reunion{background:#eee7db;color:#151411}.reunion .num,.reunion .eyebrow{color:#8e6c34}.reunion .sub,.reunion .event p{color:#655f56}.reunion .event{border-color:rgba(20,20,15,.15)}.letter{background:#d9d0c0;color:#171512;min-height:100vh}.letter .eyebrow{color:#8e6c34}.letter-card{max-width:800px;margin:auto}.letter h2{font:500 clamp(64px,9vw,125px)/.76 "Cormorant Garamond",serif;letter-spacing:-.05em;margin:0}.letter-body{margin-top:55px;max-width:680px;color:#5f5a52;line-height:2;font-family:"Cormorant Garamond",serif;font-size:23px}.letter-body p{margin:0 0 28px}.future{background:#10100e;text-align:center;min-height:80vh;display:grid;place-items:center}.future h2{font:500 clamp(68px,11vw,145px)/.75 "Cormorant Garamond",serif;margin:0}.flame{font-size:60px;color:var(--gold);text-shadow:0 0 45px rgba(201,164,92,.45);margin:25px}.final{min-height:100vh;display:grid;place-items:center;text-align:center;background:#080807}.final h2{font:500 clamp(70px,12vw,160px)/.72 "Cormorant Garamond",serif;margin:0}.final em{color:var(--gold)}.final p{color:#928b80;max-width:550px;line-height:1.8;margin:40px auto}.final .birthday{font:500 34px "Cormorant Garamond",serif;color:var(--cream)}footer{padding:25px 6vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:9px;letter-spacing:.2em;color:#666159}
+.reveal{opacity:0;transform:translateY(25px);transition:1s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:760px){.top{padding:0 4vw}.cover h1{font-size:76px}.chapter{padding:110px 5vw}.chapter-head{grid-template-columns:1fr;gap:8px}.sobi-img{height:55vh}.us-layout{grid-template-columns:1fr}.museum{max-height:620px}.story-quote{font-size:28px}.event{padding:55px 0}.sound{font-size:9px;padding:8px 10px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">GUGURU <b>GIRL</b></div>
+  <button class="sound" id="soundBtn">♫ OUR SONG · OFF</button>
+</header>
+
+<section class="cover">
+  <div class="orb"></div>
+  <div class="cover-content">
+    <p class="eyebrow">A story in memories · 13.01.2025 → 11.08.2026</p>
+    <h1>For the girl<br><em>who became my story.</em></h1>
+    <p>Some stories begin with a hello. Ours began on a hill — and somehow, it became everything.</p>
+    <button class="enter" id="enterBtn">Enter our story</button>
+  </div>
+  <div class="music-note">MOTH TO A FLAME · THE WEEKND</div>
+</section>
+
+<section class="chapter reveal">
+  <div class="chapter-inner">
+    <div class="chapter-head"><div class="num">01</div><div><p class="eyebrow">The beginning</p><h2>Sobi<br><em>Hill.</em></h2><p class="sub">13 January 2025 · A project trip. Five people. Two boys. Three girls. And the place where I first noticed you.</p></div></div>
+    <img class="sobi-img" src="media/sobi-hill.jpg" alt="Sobi Hill">
+    <div class="caption"><span>13 · 01 · 2025</span><span>THE PLACE WHERE IT STARTED</span></div>
+    <div class="story-quote">“Some remarkable memories were made here — and, without either of us knowing it, <em>the first spark of our love journey.</em>”</div>
+  </div>
+</section>
+
+<section class="chapter cinema reveal">
+  <div class="chapter-inner">
+    <div class="chapter-head"><div class="num">02</div><div><p class="eyebrow">Our first “unofficial” date</p><h2>The cinema.<br><em>Sinners.</em></h2><p class="sub">30 May 2025 · The day a horror movie gave me an excuse to hold your hand.</p></div></div>
+    <div class="film"><video controls playsinline preload="metadata" src="media/sinners.mov"></video><div class="film-label"><span>MEMORY · 02</span><span>SINNERS · 30.05.2025</span></div></div>
+    <div class="cinema-copy">
+      <p class="eyebrow">What I remember most</p>
+      <h3>It was supposed to be<br><em>just a movie.</em></h3>
+      <p>Sinners was a horror movie, and for the first time, I held your hand. It sounds like such a small thing, but to me, it wasn't.</p>
+      <p>I remember how beautiful that moment felt — not because of the movie, but because it was <em>you</em>. For those few moments, with your hand in mine, everything around us seemed to disappear.</p>
+      <p>I don't know if you realized how much that little moment meant to me. I just know that I left that cinema carrying a memory I never wanted to forget.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter us reveal">
+  <div class="chapter-inner">
+    <div class="chapter-head"><div class="num">03</div><div><p class="eyebrow">Our story</p><h2>Then there<br>was <em>us.</em></h2><p class="sub">The part of our story that wasn't always easy — but became the part that taught me what finding your way back can mean.</p></div></div>
+    <div class="us-layout">
+      <div class="us-text">
+        <div class="date-line">14 · 06 · 2025</div>
+        <h3 style="font:500 54px/.85 'Cormorant Garamond',serif;margin:0 0 25px">The day we<br><em>became us.</em></h3>
+        <p>A few weeks after the cinema, I asked you out. You declined. We were coursemates, and it became a lot for me to handle, so I tried to draw back.</p>
+        <p>Then, a few weeks later, you reached out — that maybe we should give it a shot.</p>
+        <p>And just like that, on <strong>June 14, 2025</strong>, we stopped wondering what we could be and became us.</p>
+      </div>
+      <img class="museum" src="media/us-museum.jpg" alt="A museum memory">
+    </div>
+
+    <div class="event"><div class="date-line">21 · 07 · 2025</div><h4>Your gift on my birthday.</h4><p>A small memory, kept here because some gestures mean more than their size. This is one of the moments that belongs to the story of us.</p></div>
+    <div class="event"><div class="date-line">02 · 09 · 2025</div><h4>Not every chapter was easy.</h4><p>We had an issue. We stopped talking. The timeline went quiet for a while.</p></div>
+  </div>
+</section>
+
+<section class="break">one year later</section>
+
+<section class="chapter reunion reveal">
+  <div class="chapter-inner">
+    <div class="chapter-head"><div class="num">04</div><div><p class="eyebrow">Finding our way back</p><h2>13 · 01 ·<br><em>2026</em></h2><p class="sub">The same date as the day I first noticed you — one year later, we found each other again.</p></div></div>
+    <div class="event">
+      <h4>After the field trip, I asked to see you.</h4>
+      <p>We talked. We reconciled. And somehow, we came back to each other closer than we had ever been.</p>
+      <p><strong>Since then, it has been the best time of my life.</strong></p>
+    </div>
+    <div class="story-quote">“Sometimes love isn't about never losing your way. <em>Sometimes it's about finding your way back.</em>”</div>
+  </div>
+</section>
+
+<section class="chapter letter reveal">
+  <div class="letter-card">
+    <p class="eyebrow">A letter for you</p>
+    <h2>There are things<br>I want you to know.</h2>
+    <div class="letter-body">
+      <p>Your full heartfelt message will live here. This section is deliberately kept free of photos, so your words have the entire screen to themselves.</p>
+      <p>We'll write this from your actual voice — the memories, the things you love about her, what she means to you, and everything you want her to hear on her 20th birthday.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter future reveal">
+  <div>
+    <p class="eyebrow">For the woman you're becoming</p>
+    <div class="flame">✦</div>
+    <h2>Keep chasing<br><em>your dreams.</em></h2>
+    <p class="sub" style="margin:35px auto">This is where the Ember & Spice encouragement will live — not as an advert, but as a promise that I'll be cheering for you as you build something that's yours.</p>
+  </div>
+</section>
+
+<section class="final reveal">
+  <div>
+    <p class="eyebrow">And finally…</p>
+    <h2>Happy 20th<br><em>Guguru Girl.</em></h2>
+    <p>All the pictures of you two together will appear here — and only here — after the letter.</p>
+    <p class="birthday">20 looks beautiful on you.</p>
+    <p style="color:var(--gold);letter-spacing:.3em;font-size:10px">11 · 08 · 2026</p>
+  </div>
+</section>
+
+<footer><span>GUGURU GIRL</span><span>OUR STORY · 2026</span></footer>
+
+<audio id="music" src="media/moth-to-a-flame.m4a" loop preload="auto"></audio>
+<script>
+const music=document.getElementById('music'), enter=document.getElementById('enterBtn'), sound=document.getElementById('soundBtn');
+function playMusic(){
+  music.play().then(()=>{sound.textContent='♫ OUR SONG · ON'}).catch(()=>{sound.textContent='♫ OUR SONG · TAP TO PLAY'});
+}
+enter.addEventListener('click',playMusic);
+sound.addEventListener('click',()=>{
+  if(music.paused) playMusic();
+  else {music.pause();sound.textContent='♫ OUR SONG · OFF'}
+});
+document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12}).observe(el));
+</script>
+</body>
+</html>
